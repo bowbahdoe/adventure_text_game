@@ -1,21 +1,21 @@
 package pakage01;
 import java.util.Random;
 
-public class player {
+class player {
     private final Game game;
 
     player(Game game) {
         this.game = game;
     }
 
-    public int health=50;
-    public int gold=30;
+    int health=50;
+    int gold=30;
 
     weapon[] w = new weapon[5];
     weapon[] p = new weapon[5];
 
     weapon currentweapon;
-    public void addpotion(weapon p1){
+    void addpotion(weapon p1){
         for(int i=0;i<w.length;i++){
             if(p[i]==null){
                 p[i]=p1;
@@ -23,7 +23,7 @@ public class player {
             }
         }
     }
-    public void addweapons(weapon w1){
+    void addweapons(weapon w1){
         for(int i=0;i<w.length;i++){
             if(w[i]==null){
                 w[i]=w1;
@@ -32,7 +32,7 @@ public class player {
         }
     }
 
-    public void useitem(int id){
+    void useitem(int id){
         for(int i=0;i<w.length;i++){
             if(w[i].id == id){
                 currentweapon=w[i];
@@ -43,7 +43,7 @@ public class player {
         }
     }
 
-    public int attack(){
+    int attack(){
         Random rand = new Random();
         int damage = rand.nextInt(1,11);
         damage+=currentweapon.damage;

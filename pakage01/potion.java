@@ -1,6 +1,6 @@
 package pakage01;
 
-public class potion extends weapon {
+class potion extends weapon {
     potion() {
         id = 102;
         // Let's say negative damage is healing

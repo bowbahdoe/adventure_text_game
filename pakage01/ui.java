@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ui {
+class ui {
     JFrame frame;
     JPanel panel, startpanel, choicepanel, mosterhealthpanel;
     JLabel titlelabel,monsterhealthlabel,playerhealthLabel; 
@@ -16,7 +16,7 @@ public class ui {
     shop shop1;
     Game game;
     choicehandler ch = new choicehandler();
-    public ui(){
+    ui(){
         
         frame = new JFrame("Game");
         frame.setBounds(300,150,900,600);
@@ -55,13 +55,13 @@ public class ui {
 
         frame.setVisible(true);
     }
-    public void setstory(story s, shop shop1, Game game){
+    void setstory(story s, shop shop1, Game game){
         this.s =s;
         this.shop1 = shop1;
         this.game= game;
 
     }
-    public void startgame(){
+    void startgame(){
         startbutton.setVisible(false);
         titlelabel.setVisible(false);
         startpanel.setBounds(200,320,400,230);
@@ -112,7 +112,7 @@ public class ui {
         showstats();
         s.guard();
     }
-    public void showstats(){
+    void showstats(){
         playerhealthLabel = new JLabel();
         playerhealthLabel.setBounds(30,10,800,70);
         playerhealthLabel.setForeground(Color.white);
@@ -121,7 +121,7 @@ public class ui {
         
     }
     
-    public class choicehandler implements ActionListener {
+    class choicehandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {

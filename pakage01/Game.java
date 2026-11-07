@@ -2,7 +2,7 @@ package pakage01;
 
 import java.util.Random;
 
-public class Game {
+class Game {
     ui u = new ui();
     story s = new story(this);
     player player1 =new player(this);
@@ -13,14 +13,14 @@ public class Game {
     fighting fight1;
     Random rand = new Random();
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         new Game();
     }
-    public Game(){
+    Game(){
         u.setstory(s,shop1,this);
         player1.addweapons(knife1);
     }
-    public monster createmonster(){
+    monster createmonster(){
         return new monster(this);
     }
 

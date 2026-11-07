@@ -1,6 +1,6 @@
 package pakage01;
 
-public class knife extends weapon {
+class knife extends weapon {
     knife() {
         id = 103;
         name = "knife";
