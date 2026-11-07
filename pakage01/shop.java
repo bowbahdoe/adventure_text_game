@@ -4,12 +4,12 @@ public class shop {
     player player1;
     public String name = "shop";
 
-    public weapons buysword(){
+    public weapon buysword(){
         player1.gold -= 15;
         return new sword();
     }
     
-    public weapons potion(){
+    public weapon potion(){
         player1.gold-=5;
         return new potion();
     }

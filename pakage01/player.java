@@ -6,12 +6,12 @@ public class player {
     public int gold=30;
     knife knife1 = new knife();
 
-    weapons[] w = new weapons[5];
-    weapons[] p = new weapons[5];
+    weapon[] w = new weapon[5];
+    weapon[] p = new weapon[5];
 
 
-    weapons currentweapon;
-    public void addpotion(weapons p1){
+    weapon currentweapon;
+    public void addpotion(weapon p1){
         for(int i=0;i<w.length;i++){
             if(p[i]==null){
                 p[i]=p1;
@@ -19,7 +19,7 @@ public class player {
             }
         }
     }
-    public void addweapons(weapons w1){
+    public void addweapons(weapon w1){
         for(int i=0;i<w.length;i++){
             if(w[i]==null){
                 w[i]=w1;
