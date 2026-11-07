@@ -44,8 +44,7 @@ class player {
     }
 
     int attack(){
-        Random rand = new Random();
-        int damage = rand.nextInt(1,11);
+        int damage = game.rand.nextInt(1,11);
         damage+=currentweapon.damage;
         return damage;
     }
