@@ -2,13 +2,17 @@ package pakage01;
 import java.util.Random;
 
 public class player {
+    private final Game game;
+
+    player(Game game) {
+        this.game = game;
+    }
+
     public int health=50;
     public int gold=30;
-    knife knife1 = new knife();
 
     weapon[] w = new weapon[5];
     weapon[] p = new weapon[5];
-
 
     weapon currentweapon;
     public void addpotion(weapon p1){

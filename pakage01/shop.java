@@ -1,22 +1,21 @@
 package pakage01;
 
 public class shop {
-    player player1;
+    private final Game game;
+
+    shop(Game game) {
+        this.game = game;
+    }
+
     public String name = "shop";
 
     public weapon buysword(){
-        player1.gold -= 15;
+        game.player1.gold -= 15;
         return new sword();
     }
     
     public weapon potion(){
-        player1.gold-=5;
+        game.player1.gold-=5;
         return new potion();
     }
-
-    public void giveplayer(player player1){
-    this.player1 = player1;
-    }
-    
-    
 }
